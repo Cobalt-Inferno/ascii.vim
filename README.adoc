@@ -1,0 +1,31 @@
+= ascii.vim
+
+== Why another Live View Asciidoc viewer?
+
+This project was made from my want to learn a bit of vimscript
+
+== What does ascii.vim contain?
+====
+.ascii.vim contains the following functions:
+* Copy translated pdf to a location ( `:AsciiSaveTo <path>` )
+* Reload on `:write` with zathura
+* Single open with `:AsciiOpen`
+====
+
+== Todo
+====
+* [x] Copy compiled pdfs
+* [ ] Optionally encrypt them before saving
+* [ ] Make the calls async
+
+====
+
+== Contributing
+====
+.*__Steps__*
+* Fork this https://github.com/kavulox/ascii.vim[project]
+* Submit a pull request
+====
+
+== License
+*__This project is licensed under the https://github.com/kavulox/ascii.vim/tree/master/LICENSE[AGPL-3.0]__*

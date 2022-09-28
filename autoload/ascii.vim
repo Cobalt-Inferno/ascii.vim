@@ -9,10 +9,6 @@ if !exists("g:ascii_tmpfile")
     let g:ascii_tmpfile = "/tmp/ascii"
 endif
 
-augroup autoload
-    au!
-    autocmd VimLeave * call execute '!killall zathura && rm ' . g:ascii_tmpfile
-augroup end
 
 
 if !exists('CompileAscii')
@@ -37,7 +33,6 @@ if !exists('AsciiOpen')
         augroup loading
             au!
             autocmd BufWrite * if &filetype ==# 'asciidoc' | :silent call ascii#CompileAscii()
-
         augroup end
     endfun
 endif

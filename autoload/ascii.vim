@@ -11,13 +11,12 @@ endif
 
 
 if !exists('CompileAscii')
-    fun! ascii#CompileAscii()
+    fun! ascii#CompileAscii() abort
         if &filetype ==# 'asciidoc'
             let s:tmp = '!' . g:asciidoctor_cmd . ' % -o ' . g:ascii_tmpfile . ' & disown'
             execute s:tmp
         else
             echoerr "Error compiling to pdf"
-            finish
         endif
     endfun
 endif

@@ -31,7 +31,6 @@ if !exists('AsciiOpen')
         augroup loading
             au!
             autocmd BufWrite * if &filetype ==# 'asciidoc' | :silent call ascii#CompileAscii()
-            autocmd VimLeave * if &filetype ==# 'asciidoc' | :silent execute '!rm ' . g:ascii_tmpfile
         augroup end
     endfun
 endif

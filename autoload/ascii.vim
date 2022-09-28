@@ -12,7 +12,7 @@ endif
 
 
 if !exists('CompileAscii')
-    fun! CompileAscii()
+    fun! ascii#CompileAscii()
         if &filetype ==# 'asciidoc'
             let s:tmp = '!' . g:asciidoctor_cmd . ' % -o ' . g:ascii_tmpfile . ' & disown'
             execute s:tmp
@@ -23,11 +23,11 @@ if !exists('CompileAscii')
 endif
 
 if !exists('AsciiOpen')
-    fun! AsciiOpen()
+    fun! ascii#AsciiOpen()
         let s:tmp = ':!' . g:renderer . ' ' . g:ascii_tmpfile . ' & disown'
         execute s:tmp
     endfun
-    fun! AsciiLive()
+    fun! ascii#AsciiLive()
         :silent call CompileAscii()
         :silent call AsciiOpen()
         augroup loading

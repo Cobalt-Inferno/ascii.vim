@@ -12,5 +12,5 @@ endif
 let g:loaded_ascii = 1
 
 " Exposes the plugin's functions for use as commands in Vim.
-command! -nargs=0 AsciiOpen call AsciiOpen()
-command! -nargs=0 AsciiLive call AsciiLive()
+command! -nargs=0 AsciiOpen call ascii#AsciiOpen()
+command! -nargs=0 AsciiLive call ascii#AsciiLive()

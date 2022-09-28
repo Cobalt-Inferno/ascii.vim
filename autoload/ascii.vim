@@ -16,7 +16,7 @@ if !exists('CompileAscii')
             let s:tmp = '!' . g:asciidoctor_cmd . ' % -o ' . g:ascii_tmpfile . ' & disown'
             execute s:tmp
         else
-            echoerr "Error compiling to pdf"
+            throw "Error compiling to pdf"
         endif
     endfun
 endif

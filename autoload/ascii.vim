@@ -8,7 +8,6 @@ endif
 if !exists("g:ascii_tmpfile")
     let g:ascii_tmpfile = "/tmp/ascii"
 endif
-let g:ascii_can_continue = 1
 
 
 if !exists('CompileAscii')
@@ -18,7 +17,7 @@ if !exists('CompileAscii')
             execute s:tmp
         else
             echoerr "Error compiling to pdf"
-            g:ascii_can_continue = 0
+            finish
         endif
     endfun
 endif
@@ -29,13 +28,11 @@ if !exists('AsciiOpen')
         execute s:tmp
     endfun
     fun! ascii#AsciiLive()
-        if g:ascii_can_continue == 1
-            :silent call ascii#CompileAscii()
-            :silent call ascii#AsciiOpen()
-            augroup loading
-                au!
-                autocmd BufWrite * :silent call ascii#CompileAscii()
-            augroup end
-        endif
+        :silent call ascii#CompileAscii()
+        :silent call ascii#AsciiOpen()
+        augroup loading
+            au!
+            autocmd BufWrite * :silent call ascii#CompileAscii()
+        augroup end
     endfun
 endif

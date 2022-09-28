@@ -2,7 +2,7 @@
 :author: kavulox / imartix
 :url: https://github.com/kavulox/ascii.vim
 
-== *__Why another Live View Asciidoc viewer?__*
+== *__Why another Live Asciidoc viewer?__*
 
 This project was made from my want to learn a bit of vimscript
 

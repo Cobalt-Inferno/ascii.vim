@@ -11,7 +11,7 @@ endif
 
 augroup autoload
     au!
-    autocmd VimLeave * call execute '!rm ' . g:ascii_tmpfile
+    autocmd VimLeave * call execute '!killall zathura && rm ' . g:ascii_tmpfile
 augroup end
 
 

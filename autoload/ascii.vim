@@ -35,8 +35,9 @@ if !exists('AsciiOpen')
         augroup end
     endfun
 endif
+
 if !exists('AsciiSaveTo')
     fun! ascii#AsciiSaveTo(path)
-        :silent execute ':!cp ' . g:ascii_tmpfile . ' ' . a:path
+        :execute ':!cp ' . g:ascii_tmpfile . ' ' . a:path
     endfun
 endif

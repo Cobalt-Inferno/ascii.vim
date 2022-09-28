@@ -15,7 +15,7 @@ This project was made from my want to learn a bit of vimscript
 ====
 
 == *__Installation__*
-[sidebar]
+[source,sh]
 ====
 .*__Steps for Vim-Plug__*
 * Put `Plug 'kavulox/ascii.vim'` in your .vimrc

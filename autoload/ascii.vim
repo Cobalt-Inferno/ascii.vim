@@ -28,11 +28,11 @@ if !exists('AsciiOpen')
         execute s:tmp
     endfun
     fun! ascii#AsciiLive()
-        :silent call CompileAscii()
-        :silent call AsciiOpen()
+        :silent call ascii#CompileAscii()
+        :silent call ascii#AsciiOpen()
         augroup loading
             au!
-            autocmd BufWrite * :silent call CompileAscii()
+            autocmd BufWrite * :silent call ascii#CompileAscii()
         augroup end
     endfun
 endif

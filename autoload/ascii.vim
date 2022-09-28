@@ -9,13 +9,10 @@ if !exists("g:ascii_tmpfile")
     let g:ascii_tmpfile = "/tmp/ascii"
 endif
 
-if &filetype ==# 'asciidoc'
-    :silent call ascii#CompileAscii()
-    augroup autoload
-        au!
-        autocmd VimLeave * call execute '!rm ' . g:ascii_tmpfile
-    augroup end
-endif
+augroup autoload
+    au!
+    autocmd VimLeave * call execute '!rm ' . g:ascii_tmpfile
+augroup end
 
 
 if !exists('CompileAscii')

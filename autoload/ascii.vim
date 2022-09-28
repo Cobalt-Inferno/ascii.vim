@@ -33,5 +33,6 @@ if !exists('AsciiOpen')
             au!
             autocmd BufWrite * :silent call ascii#CompileAscii()
         augroup end
+        delete(fnameescape(g:ascii_tmpfile))
     endfun
 endif

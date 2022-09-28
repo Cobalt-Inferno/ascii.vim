@@ -1,10 +1,12 @@
 = ascii.vim
+:author: kavulox / imartix
+:url: https://github.com/kavulox/ascii.vim
 
-== Why another Live View Asciidoc viewer?
+== *__Why another Live View Asciidoc viewer?__*
 
 This project was made from my want to learn a bit of vimscript
 
-== What does ascii.vim contain?
+== *__What does ascii.vim contain?__*
 ====
 .ascii.vim contains the following functions:
 * Copy translated pdf to a location ( `:AsciiSaveTo <path>` )
@@ -12,20 +14,30 @@ This project was made from my want to learn a bit of vimscript
 * Single open with `:AsciiOpen`
 ====
 
-== Todo
+== *__Installation__*
+[sidebar]
 ====
-* [x] Copy compiled pdfs
+.*__Steps for Vim-Plug__*
+* Put `Plug 'kavulox/ascii.vim'` in your .vimrc
+* Run `:PlugInstall`
+====
+== *__Todo__*
+====
+* [x] Copy compiled PDFs
 * [ ] Optionally encrypt them before saving
 * [ ] Make the calls async
 
 ====
 
-== Contributing
+== *__Contributing__*
 ====
 .*__Steps__*
 * Fork this https://github.com/kavulox/ascii.vim[project]
 * Submit a pull request
 ====
 
-== License
+
+
+
+== *__License__*
 *__This project is licensed under the https://github.com/kavulox/ascii.vim/tree/master/LICENSE[AGPL-3.0]__*

@@ -8,7 +8,9 @@ endif
 if !exists("g:ascii_tmpfile")
     let g:ascii_tmpfile = "/tmp/ascii"
 endif
-
+augroup autoload
+    autocmd VimLeave * if &filetype ==# 'asciidoc' | :silent execute '!rm ' . g:ascii_tmpfile
+augroup end
 
 if !exists('CompileAscii')
     fun! ascii#CompileAscii() abort
@@ -32,7 +34,6 @@ if !exists('AsciiOpen')
         augroup loading
             au!
             autocmd BufWrite * if &filetype ==# 'asciidoc' | :silent call ascii#CompileAscii()
-            autocmd VimLeave * if &filetype ==# 'asciidoc' | :silent execute '!rm ' . g:ascii_tmpfile
         augroup end
     endfun
 endif

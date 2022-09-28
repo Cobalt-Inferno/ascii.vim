@@ -31,6 +31,8 @@ if !exists('AsciiOpen')
         augroup loading
             au!
             autocmd BufWrite * if &filetype ==# 'asciidoc' | :silent call ascii#CompileAscii()
+            autocmd InsertChange * if &filetype ==# 'asciidoc' | :silent call ascii#CompileAscii()
+
         augroup end
     endfun
 endif

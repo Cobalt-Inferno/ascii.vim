@@ -14,3 +14,4 @@ let g:loaded_ascii = 1
 " Exposes the plugin's functions for use as commands in Vim.
 command! -nargs=0 AsciiOpen call ascii#AsciiOpen()
 command! -nargs=0 AsciiLive call ascii#AsciiLive()
+command! -nargs=1 AsciiSaveTo call ascii#AsciiSaveTo(<f-args>)

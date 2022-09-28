@@ -33,7 +33,10 @@ if !exists('AsciiOpen')
             au!
             autocmd BufWrite * :silent call ascii#CompileAscii()
         augroup end
-        :silent execute '!rm ' . g:ascii_tmpfile
-        " ^ just cleanup
+    endfun
+endif
+if !exists('AsciiSaveTo')
+    fun! ascii#AsciiSaveTo(path)
+        :silent execute ':!cp ' . g:ascii_tmpfile . ' ' . a:path
     endfun
 endif

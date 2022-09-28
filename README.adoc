@@ -15,12 +15,23 @@ This project was made from my want to learn a bit of vimscript
 ====
 
 == *__Installation__*
-[source,sh]
-====
-.*__Steps for Vim-Plug__*
-* Put `Plug 'kavulox/ascii.vim'` in your .vimrc
-* Run `:PlugInstall`
-====
+=== Requirements:
+* Zathura-pdf
+* Asciidoctor-pdf
+
+[sidebar]
+.vim-plug
+----
+1. Put `Plug 'kavulox/ascii.vim'` in your .vimrc
+2. Run `:PlugInstall`
+----
+== *__Basic Usage__*
+*__Open any AsciiDoc file__*
+----
+:AsciiLive
+----
+__This will open a new window with the Zathura PDF viewer. Anytime you write to the file, it will update.__
+
 == *__Todo__*
 ====
 * [x] Copy compiled PDFs
